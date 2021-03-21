@@ -1,0 +1,252 @@
+:root {
+  /* Palette came from https://coolors.co/50514f-cbd4c2-fffcff-247ba0-c3b299 */
+  --davys-grey: #50514fff;
+  --ash-gray: #cbd4c2ff;
+  --snow: #fffcffff;
+  --celadon-blue: #247ba0ff;
+  --khaki-web: #c3b299ff;
+}
+* {
+  box-sizing: border-box;
+  /* border: dashed red 1px;*/
+  font-size: 1em;
+  /* border-style: dashed;
+  border-color: red;
+  border-width: 1px; */
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--ash-gray);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--ash-gray);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+}
+
+.col {
+  flex: 1;
+}
+
+/* styling related to the navigation bar */
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--davys-grey);
+  align-items: stretch;
+}
+
+.nav-element {
+  display: flex;
+  justify-content: center;
+  padding: .5em .5em;
+  margin: 1em .5em 1em 0em;
+  color: var(--ash-gray);
+  text-decoration: none;
+  border-bottom-style:solid;
+  font-size: 1.2em;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.nav-bar-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+  background-color:var(--ash-gray);
+  padding: .5em 1em;
+  color: var(--davys-grey);
+  z-index:10;
+  position: absolute;
+  left: 0em;
+  top: .6em;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+/* styling related to the graphic banner */
+
+.hero-banner {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.cool-subtitle {
+  display: flex;
+  justify-content: center;
+  background-color:var(--ash-gray);
+  padding: 9px 15px;
+  color: var(--davys-grey);
+  z-index: 10;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.hero-image > img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+/* stlying related to the main body of the page */
+
+.portfolio-section {
+    display: flex;
+    flex-flow: row;
+    margin-top: 2em;
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+.portfolio-header {
+  display: flex;
+  text-align: right;
+  flex: 0 0 15vw;
+  justify-content: flex-end;
+  border-right:var(--davys-grey);
+  border-right: solid;
+  margin-right: 20px;
+  padding-right: 10px;
+  font-size: 24px;
+}
+  
+.portfolio-block {
+  flex-basis: 85vw;
+  flex-direction: column;
+  justify-content:stretch;
+  align-items: center;
+}
+
+.portfolio-area-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.portfolio-area-n {
+  display: flex;
+  flex-basis: 20%;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.work-featured {
+  display: flex;
+  position:relative;
+  flex-basis: 100%;
+  border-color: var(--ash-gray);
+  border-style: solid;
+  border-width: .5em;
+  margin: .5em .5em;
+}
+
+.work-lessor {
+  display: flex;
+  flex-direction: row;
+}
+
+.work-lessor-item {
+  display: flex;
+  position: relative;
+  flex-basis: 50%; 
+  border-color: var(--ash-gray);
+  border-style: solid;
+  border-width: .5em;
+  margin: .5em .5em;
+}
+
+.work-featured > img {
+  max-width: 100%;
+  height: auto;
+}
+
+#work-featured {
+  max-width: 100%;
+  height: auto;
+}
+
+.work-lessor-item > img > a {
+  max-width: 100%;
+  height: auto;
+}
+
+.work-label {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: var(--ash-gray);
+  padding: .5em 1em;
+  color: var(--davys-grey);
+  z-index:10;
+  position:absolute;  
+  /* bottom: 0px; */
+  bottom: 10%;
+}
+
+.work-label-title {
+  font-size: large;
+  font-weight: bold;
+}
+
+.work-label-subtitle {
+  font-size: small;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: row;
+  border-color: blue;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+/* on smaller screens lets switch to flex-direction: column plus some formatting */
+
+@media screen 
+  and (max-width: 768px) { 
+
+    .portfolio-section {
+      flex-direction: column;
+    }
+    
+    .portfolio-header {
+      text-align: left;
+      flex: 0 0 1em;
+      justify-content: flex-start;
+      border-bottom:var(--davys-grey);
+      border-bottom: solid;
+      border-right: none;
+      margin-bottom: 1em;
+    }
+    
+    .portfolio-block {
+      flex-basis: 0;
+    }
+}
